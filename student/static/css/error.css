@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fef2f2, #fff7ed, #f5f3ff);
+    color: #1e293b;
+}
+
+/* Main container */
+.main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+}
+
+/* Error card */
+.error {
+    width: 100%;
+    max-width: 560px;
+    padding: 50px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #fee2e2;
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(153, 27, 27, 0.10);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative top border */
+.error::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #ef4444, #f97316, #a855f7);
+}
+
+/* 404 illustration */
+.error::after {
+    content: "404";
+    display: block;
+    margin-bottom: 18px;
+    font-size: clamp(65px, 12vw, 100px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 5px;
+    color: #fee2e2;
+    text-shadow: 3px 3px 0 #fecaca;
+}
+
+/* Error message */
+.msg {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #991b1b;
+    overflow-wrap: anywhere;
+    margin-bottom: 30px;
+}
+
+/* Home button */
+.error a {
+    display: inline-block;
+    padding: 13px 28px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 10px;
+    box-shadow: 0 7px 18px rgba(79, 70, 229, 0.22);
+    transition: all 0.3s ease;
+}
+
+.error a::before {
+    content: "← ";
+    font-size: 18px;
+}
+
+.error a:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #4338ca, #6d28d9);
+    box-shadow: 0 11px 24px rgba(79, 70, 229, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    .error {
+        padding: 40px 20px;
+        border-radius: 18px;
+    }
+
+    .msg {
+        font-size: 17px;
+    }
+
+    .error a {
+        padding: 12px 22px;
+    }
+}

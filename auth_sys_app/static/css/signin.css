@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 35px 20px;
+    display: block;
+    background: linear-gradient(
+        135deg,
+        #e8eafc,
+        #fce4ec,
+        #e0f7fa
+    );
+    overflow-y: auto;
+}
+
+/* Main Card */
+.main {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #eee8f5;
+    border-radius: 24px;
+    box-shadow: 0 15px 45px rgba(117, 105, 160, 0.12);
+    position: relative;
+}
+
+/* Decorative Icon */
+.login-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 22px;
+    border-radius: 22px;
+    background: #eee9ff;
+    color: #8972d6;
+    font-size: 38px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    color: #393552;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #a99bea, #f3a6c8);
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    color: #89849b;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Form Layout */
+.main form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0;
+    width: 100%;
+}
+
+/* Input Groups */
+.main form .fields {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin-bottom: 22px;
+}
+
+/* Labels */
+.fields label {
+    display: block;
+    margin-bottom: 8px;
+    color: #514b68;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Input Fields */
+.fields input,
+.fields textarea,
+.fields select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    padding: 12px 15px;
+    border: 1.5px solid #e6e0f0;
+    border-radius: 11px;
+    outline: none;
+    background: #faf9ff;
+    color: #393552;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.fields textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Placeholder */
+.fields input::placeholder,
+.fields textarea::placeholder {
+    color: #aaa4bb;
+}
+
+/* Input Focus */
+.fields input:focus,
+.fields textarea:focus,
+.fields select:focus {
+    border-color: #a99bea;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(169, 155, 234, 0.13);
+}
+
+/* Error Message */
+.error {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #f5cbd9;
+    border-radius: 10px;
+    background: #fff1f5;
+    color: #bd557c;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Submit Button */
+.main form button[type="submit"] {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    margin-top: 3px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #a99bea, #d5a6d9);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(169, 155, 234, 0.22);
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.main form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #9382d5, #c38bc7);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(169, 155, 234, 0.3);
+}
+
+/* Button Click */
+.main form button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .main {
+        max-width: 100%;
+        padding: 28px 20px;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    .heading {
+        font-size: 22px;
+    }
+}

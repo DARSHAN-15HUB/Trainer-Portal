@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Create{% endblock title %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/create.css' %}">
+{% endblock css %}
+{% block content %}
+<div class="main">
+  <h1 class="heading">Enter Student's Details</h1>
+  {% include 'partials/forms.html' %}
+</div> 
+{% endblock content %}

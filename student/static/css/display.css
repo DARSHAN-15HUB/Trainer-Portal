@@ -1,0 +1,220 @@
+/* .main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+h1{
+  font-size:60px;
+
+}
+.main table{
+  border:2px solid black;
+}
+.main table th,td{
+  border: 1px solid black;
+  padding:15px;
+  font-size:20px;
+  text-align: center;
+}
+.create{
+  
+  height:40px;
+  width:250px;
+  background-color: #0575E6;
+  color:white;
+  font-size:30px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+}
+.create:hover{
+  cursor:pointer;
+  background-color: #24A0ED;
+} */
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc, #e0f2fe);
+    min-height: 100vh;
+    color: #1e293b;
+}
+
+/* Main dashboard */
+.main {
+    width: 95%;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(79, 70, 229, 0.10);
+    border: 1px solid #e8edff;
+}
+
+/* Page heading */
+.main h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #312e81;
+    margin-bottom: 25px;
+    letter-spacing: -0.8px;
+}
+
+/* Create student button */
+.create {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #059669, #10b981);
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 14px rgba(16, 185, 129, 0.2);
+    transition: 0.3s ease;
+}
+
+.create::before {
+    content: "+ ";
+    font-size: 19px;
+}
+
+.create:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Responsive table wrapper */
+.main table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+/* Table heading */
+.main thead {
+    background: linear-gradient(120deg, #4338ca, #7c3aed);
+    color: white;
+}
+
+.main th {
+    padding: 17px 14px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Table rows */
+.main td {
+    padding: 16px 14px;
+    font-size: 12px;
+    border-bottom: 1px solid #e8edf5;
+    color: #475569;
+    vertical-align: middle;
+}
+
+.main tbody tr:nth-child(even) {
+    background: #f5f7ff;
+}
+
+.main tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.main tbody tr:hover {
+    background: #eef2ff;
+}
+
+.main tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action buttons */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.25s ease;
+    white-space: nowrap;
+}
+
+/* Update button */
+.update-btn {
+    color: #4338ca;
+    background: #e0e7ff;
+    border: 1px solid #c7d2fe;
+}
+
+.update-btn:hover {
+    color: white;
+    background: #4f46e5;
+}
+
+/* Delete link styling */
+.actions a:last-child {
+    color: #dc2626;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.actions a:last-child:hover {
+    color: white;
+    background: #dc2626;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    .main {
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .main table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: 96%;
+        margin: 20px auto;
+        padding: 16px 12px;
+    }
+
+    .main h1 {
+        font-size: 24px;
+    }
+
+    .main th,
+    .main td {
+        padding: 12px 10px;
+    }
+}
+

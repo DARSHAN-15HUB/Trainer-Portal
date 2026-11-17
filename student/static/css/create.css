@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(
+        135deg,
+        #f8eaff 0%,
+        #e8e7ff 50%,
+        #ffe5f0 100%
+    );
+}
+
+
+.main {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(79, 42, 120, 0.15);
+
+  
+}
+
+
+.heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #58258b;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+}
+
+
+.main form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main form .fields {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 20px 0;
+    padding: 0;
+    float: none;
+    clear: both;
+    grid-column: 1 / -1;
+}
+
+
+.main form .fields label {
+    display: block;
+    width: 100%;
+    margin: 0 0 8px 0;
+    color: #48206d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main form .fields input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 50px;
+    padding: 12px 15px;
+    margin: 0;
+    border: 1.5px solid #e3d5f5;
+    border-radius: 12px;
+    outline: none;
+    background: #faf7ff;
+    color: #30213f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    box-shadow: none;
+    transition: border-color 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+.main form .fields input::placeholder {
+    color: #a89ab8;
+    opacity: 1;
+}
+
+
+.main form .fields input:focus {
+    border-color: #9254de;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(146, 84, 222, 0.12);
+}
+
+
+.main form .fields textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 150px;
+    height: 150px;
+    padding: 12px 15px;
+    margin: 0;
+    border: 1.5px solid #e3d5f5;
+    border-radius: 12px;
+    outline: none;
+    background: #faf7ff;
+    color: #30213f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    overflow-y: auto;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: border-color 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+.main form .fields textarea::placeholder {
+    color: #a89ab8;
+    opacity: 1;
+}
+
+
+.main form .fields textarea:focus {
+    border-color: #9254de;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(146, 84, 222, 0.12);
+}
+
+.main form .fields ul.errorlist,
+.main form .fields .errorlist {
+    list-style: none;
+    margin-top: 6px;
+    color: #dc2626;
+    font-size: 12px;
+}
+
+
+.main form .errorlist {
+    color: #dc2626;
+    font-size: 13px;
+    margin: 5px 0 10px;
+    padding-left: 0;
+    list-style: none;
+}
+
+
+.main form button[type="submit"] {
+    display: block;
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    margin: 5px 0 0 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #a855f7,
+        #ec4899
+    );
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+.main form button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(124, 58, 237, 0.35);
+}
+
+
+.main form button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .main {
+        max-width: 100%;
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    .heading {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+
+    .main form .fields input {
+        height: 46px;
+        font-size: 13px;
+    }
+
+    .main form .fields textarea {
+        min-height: 130px;
+        height: 150px;
+        font-size: 13px;
+    }
+
+    .main form .fields {
+        margin-bottom: 17px;
+    }
+
+    .main form button[type="submit"] {
+        min-height: 48px;
+        font-size: 15px;
+    }
+}

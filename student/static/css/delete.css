@@ -1,0 +1,161 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* Main Container */
+.main {
+    width: 90%;
+    max-width: 550px;
+    margin: 100px auto;
+    padding: 45px 35px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(15px);
+
+    animation: fadeIn 0.7s ease;
+}
+
+/* Delete Icon */
+.main::before {
+    content: "🗑️";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+
+    font-size: 42px;
+    background: rgba(239, 68, 68, 0.15);
+    border: 2px solid rgba(248, 113, 113, 0.5);
+    border-radius: 50%;
+
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);
+}
+
+/* Heading */
+.main h1 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+.main h1::first-letter {
+    color: #f87171;
+}
+
+/* Form */
+.main form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+/* Confirm Button */
+.main button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25);
+    transition: all 0.3s ease;
+}
+
+.main button:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(239, 68, 68, 0.4);
+}
+
+.main button:active {
+    transform: scale(0.97);
+}
+
+/* Cancel Link */
+.main a {
+    display: block;
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.main a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #818cf8;
+    transform: translateY(-2px);
+}
+
+/* Entrance Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .main {
+        width: 92%;
+        margin: 60px auto;
+        padding: 30px 22px;
+    }
+
+    .main h1 {
+        font-size: 21px;
+    }
+
+    .main::before {
+        width: 75px;
+        height: 75px;
+        font-size: 34px;
+    }
+}

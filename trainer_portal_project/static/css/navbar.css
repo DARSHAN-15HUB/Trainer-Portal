@@ -1,0 +1,105 @@
+/* Navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side - Trainer's Portal */
+nav .left a {
+    color: #38bdf8;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* Right side - Login, Register, Logout */
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav .right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+nav .right a:hover {
+    background: #374151;
+    color: #38bdf8;
+}
+
+/* Username */
+nav .right p {
+    color: #a7f3d0;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Logout button */
+nav .right .btn a {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+nav .right .btn a:hover {
+    background: #b91c1c;
+    color: #ffffff;
+}
+
+/* Prevent content from hiding behind the fixed navbar */
+body {
+    margin: 0;
+    padding-top: 70px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    nav {
+        height: 65px;
+        padding: 0 14px;
+    }
+
+    nav .left a {
+        font-size: 17px;
+        letter-spacing: 0;
+    }
+
+    nav .right {
+        gap: 5px;
+    }
+
+    nav .right a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    nav .right p {
+        font-size: 12px;
+    }
+
+    body {
+        padding-top: 65px;
+    }
+}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} not Found {% endblock title %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/error.css' %}">
+{% endblock css %}
+{% block content %}
+<div class="main">
+  <div class="error"><p class="msg">Student ID : {{id}} doest not exists !!!</p>
+  <a href="{% url 'display' %}">Go Home</a>
+  </div>
+ 
+</div>
+{% endblock content %}
